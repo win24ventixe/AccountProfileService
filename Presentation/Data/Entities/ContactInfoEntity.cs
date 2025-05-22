@@ -11,7 +11,7 @@ public class ContactInfoEntity
     public string UserId { get; set; } = null!;
     public ProfileEntity Profile { get; set; } = null!;
 
-    [ForeignKey(nameof(Profile))]
+    [ForeignKey(nameof(ContactType))]
     public int ContactTypeId { get; set; } 
     public ContactTypeEntity ContactType { get; set; } = null!;
     public string? Value { get; set; } 

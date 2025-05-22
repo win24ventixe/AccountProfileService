@@ -1,6 +1,4 @@
-﻿
-using Microsoft.Build.Framework.Profiler;
-using Presentation.Data.Entities;
+﻿using Presentation.Data.Entities;
 using Presentation.Data.Repositories;
 using Presentation.Models;
 
@@ -46,7 +44,7 @@ public class AccountProfileService(IProfileRepository profileRepository) : IAcco
             FirstName = x.FirstName,
             LastName = x.LastName,
         });
-        return new ProfileResult<IEnumerable<Profile>> { Success = true, Result = events };
+        return new ProfileResult<IEnumerable<Profile>> { Success = true, Result = profiles };
     }
 
     public async Task<ProfileResult<Profile?>> GetProfileAsync(string profileId)
